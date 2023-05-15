@@ -31,6 +31,8 @@ BuildRequires: cmake(KF6Notifications)
 BuildRequires: cmake(KF6Service)
 BuildRequires: cmake(Qca-qt6)
 BuildRequires: cmake(KF6I18n)
+BuildRequires: cmake(KF6DocTools)
+BuildRequires: cmake(KF6ConfigWidgets)
 Requires: %{libname} = %{EVRD}
 
 %description

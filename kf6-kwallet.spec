@@ -30,6 +30,7 @@ BuildRequires: cmake(KF6DBusAddons)
 BuildRequires: cmake(KF6Notifications)
 BuildRequires: cmake(KF6Service)
 BuildRequires: cmake(Qca-qt6)
+BuildRequires: cmake(KF6I18n)
 Requires: %{libname} = %{EVRD}
 
 %description

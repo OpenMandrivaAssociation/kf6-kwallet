@@ -33,6 +33,8 @@ BuildRequires: cmake(Qca-qt6)
 BuildRequires: cmake(KF6I18n)
 BuildRequires: cmake(KF6DocTools)
 BuildRequires: cmake(KF6ConfigWidgets)
+BuildRequires: pkgconfig(libgcrypt)
+BuildRequires: cmake(Gpgmepp)
 Requires: %{libname} = %{EVRD}
 
 %description

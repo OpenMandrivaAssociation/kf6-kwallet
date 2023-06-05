@@ -1,6 +1,6 @@
 %define libname %mklibname KF6Wallet
 %define devname %mklibname KF6Wallet -d
-%define git 20230527
+%define git 20230606
 
 Name: kf6-kwallet
 Version: 5.240.0
@@ -92,4 +92,4 @@ Safe desktop-wide storage for passwords
 
 %files -n %{libname}
 %{_libdir}/libKF6Wallet.so*
-%{_libdir}/libkwalletbackend5.so*
+%{_libdir}/libKF6WalletBackend.so*

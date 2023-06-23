@@ -35,6 +35,8 @@ BuildRequires: cmake(KF6DocTools)
 BuildRequires: cmake(KF6ConfigWidgets)
 BuildRequires: pkgconfig(libgcrypt)
 BuildRequires: cmake(Gpgmepp)
+# Just to make sure the plasma5 version isn't pulled in
+BuildRequires: plasma6-xdg-desktop-portal-kde
 Requires: %{libname} = %{EVRD}
 
 %description

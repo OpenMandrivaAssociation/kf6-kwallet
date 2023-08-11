@@ -1,6 +1,6 @@
 %define libname %mklibname KF6Wallet
 %define devname %mklibname KF6Wallet -d
-%define git 20230802
+%define git 20230811
 
 Name: kf6-kwallet
 Version: 5.240.0

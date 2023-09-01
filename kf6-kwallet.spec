@@ -1,6 +1,6 @@
 %define libname %mklibname KF6Wallet
 %define devname %mklibname KF6Wallet -d
-%define git 20230825
+%define git 20230901
 
 Name: kf6-kwallet
 Version: 5.240.0
@@ -80,11 +80,12 @@ Safe desktop-wide storage for passwords
 %files -f %{name}.lang
 %{_datadir}/qlogging-categories6/kwallet.*
 %{_bindir}/kwallet-query
-%{_bindir}/kwalletd5
-%{_datadir}/applications/org.kde.kwalletd5.desktop
+%{_bindir}/kwalletd6
+%{_datadir}/applications/org.kde.kwalletd6.desktop
 %{_datadir}/dbus-1/interfaces/kf6_org.kde.KWallet.xml
+%{_datadir}/dbus-1/services/org.kde.kwalletd6.service
 %{_datadir}/dbus-1/services/org.kde.kwalletd5.service
-%{_datadir}/knotifications6/kwalletd5.notifyrc
+%{_datadir}/knotifications6/kwalletd6.notifyrc
 %{_mandir}/man1/kwallet-query.1*
 
 %files -n %{devname}

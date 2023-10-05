@@ -1,6 +1,6 @@
 %define libname %mklibname KF6Wallet
 %define devname %mklibname KF6Wallet -d
-%define git 20230927
+%define git 20231005
 
 Name: kf6-kwallet
 Version: 5.240.0
@@ -91,7 +91,6 @@ Safe desktop-wide storage for passwords
 %files -n %{devname}
 %{_includedir}/KF6/KWallet
 %{_libdir}/cmake/KF6Wallet
-%{_qtdir}/mkspecs/modules/qt_KWallet.pri
 %{_qtdir}/doc/KF6Wallet.*
 
 %files -n %{libname}

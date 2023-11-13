@@ -6,12 +6,13 @@
 
 Name: kf6-kwallet
 Version: 5.245.0
-Release: %{?git:0.%{git}.}1
+Release: %{?git:0.%{git}.}2
 %if 0%{?git:1}
 Source0: https://invent.kde.org/frameworks/kwallet/-/archive/master/kwallet-master.tar.bz2#/kwallet-%{git}.tar.bz2
 %else
 Source0: https://download.kde.org/%{stable}/frameworks/%{version}/kwallet-%{version}.tar.xz
 %endif
+Patch0: https://invent.kde.org/frameworks/kwallet/-/merge_requests/67.patch
 Summary: Safe desktop-wide storage for passwords
 URL: https://invent.kde.org/frameworks/kwallet
 License: CC0-1.0 LGPL-2.0+ LGPL-2.1 LGPL-3.0
@@ -92,6 +93,7 @@ Safe desktop-wide storage for passwords
 %{_datadir}/dbus-1/services/org.kde.kwalletd6.service
 %{_datadir}/dbus-1/services/org.kde.kwalletd5.service
 %{_datadir}/knotifications6/kwalletd6.notifyrc
+%{_datadir}/xdg-desktop-portal/portals/kwallet.portal
 %{_mandir}/man1/kwallet-query.1*
 
 %files -n %{devname}

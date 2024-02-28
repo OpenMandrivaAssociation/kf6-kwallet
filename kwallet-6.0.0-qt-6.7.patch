@@ -1,0 +1,11 @@
+diff -up kwallet-6.0.0/src/runtime/kwalletd/kwalletportalsecrets.h.omv~ kwallet-6.0.0/src/runtime/kwalletd/kwalletportalsecrets.h
+--- kwallet-6.0.0/src/runtime/kwalletd/kwalletportalsecrets.h.omv~	2024-02-28 13:52:42.482381410 +0100
++++ kwallet-6.0.0/src/runtime/kwalletd/kwalletportalsecrets.h	2024-02-28 13:53:01.030602907 +0100
+@@ -10,6 +10,7 @@
+ 
+ #include <QDBusObjectPath>
+ #include <QDBusUnixFileDescriptor>
++#include <QDBusMessage>
+ #include <QObject>
+ 
+ #include "kwalletd.h"

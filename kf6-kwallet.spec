@@ -2,10 +2,10 @@
 
 %define libname %mklibname KF6Wallet
 %define devname %mklibname KF6Wallet -d
-%define git 20240217
+#define git 20240217
 
 Name: kf6-kwallet
-Version: 5.250.0
+Version: 6.0.0
 Release: %{?git:0.%{git}.}1
 %if 0%{?git:1}
 Source0: https://invent.kde.org/frameworks/kwallet/-/archive/master/kwallet-master.tar.bz2#/kwallet-%{git}.tar.bz2
@@ -13,6 +13,7 @@ Source0: https://invent.kde.org/frameworks/kwallet/-/archive/master/kwallet-mast
 Source0: https://download.kde.org/%{stable}/frameworks/%{version}/kwallet-%{version}.tar.xz
 %endif
 Patch0: https://invent.kde.org/frameworks/kwallet/-/merge_requests/67.patch
+Patch1: kwallet-6.0.0-qt-6.7.patch
 Summary: Safe desktop-wide storage for passwords
 URL: https://invent.kde.org/frameworks/kwallet
 License: CC0-1.0 LGPL-2.0+ LGPL-2.1 LGPL-3.0

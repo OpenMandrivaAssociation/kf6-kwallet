@@ -6,7 +6,7 @@
 
 Name: kf6-kwallet
 Version: 6.0.0
-Release: %{?git:0.%{git}.}1
+Release: %{?git:0.%{git}.}2
 %if 0%{?git:1}
 Source0: https://invent.kde.org/frameworks/kwallet/-/archive/master/kwallet-master.tar.bz2#/kwallet-%{git}.tar.bz2
 %else

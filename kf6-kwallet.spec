@@ -42,6 +42,7 @@ BuildRequires: cmake(KF6I18n)
 BuildRequires: cmake(KF6DocTools)
 BuildRequires: cmake(KF6ConfigWidgets)
 BuildRequires: cmake(KF6WindowSystem)
+BuildRequires: cmake(KF6Crash)
 BuildRequires: pkgconfig(libgcrypt)
 BuildRequires: cmake(Gpgmepp)
 # Just to make sure the plasma5 version isn't pulled in

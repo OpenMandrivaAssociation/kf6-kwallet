@@ -6,7 +6,7 @@
 #define git 20240217
 
 Name: kf6-kwallet
-Version: 6.7.0
+Version: 6.8.0
 Release: %{?git:0.%{git}.}1
 %if 0%{?git:1}
 Source0: https://invent.kde.org/frameworks/kwallet/-/archive/master/kwallet-master.tar.bz2#/kwallet-%{git}.tar.bz2

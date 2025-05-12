@@ -6,7 +6,7 @@
 #define git 20240217
 
 Name: kf6-kwallet
-Version: 6.13.0
+Version: 6.14.0
 Release: %{?git:0.%{git}.}1
 %if 0%{?git:1}
 Source0: https://invent.kde.org/frameworks/kwallet/-/archive/master/kwallet-master.tar.bz2#/kwallet-%{git}.tar.bz2
@@ -88,15 +88,17 @@ Safe desktop-wide storage for passwords
 
 %files -f %{name}.lang
 %{_datadir}/qlogging-categories6/kwallet.*
+%{_bindir}/ksecretd
 %{_bindir}/kwallet-query
 %{_bindir}/kwalletd6
-%{_datadir}/applications/org.kde.kwalletd6.desktop
+%{_datadir}/applications/org.kde.ksecretd.desktop
 %{_datadir}/dbus-1/interfaces/kf6_org.kde.KWallet.xml
 %{_datadir}/dbus-1/services/org.kde.kwalletd6.service
 %{_datadir}/dbus-1/services/org.kde.kwalletd5.service
-%{_datadir}/knotifications6/kwalletd6.notifyrc
+%{_datadir}/dbus-1/services/org.kde.secretservicecompat.service
 %{_datadir}/xdg-desktop-portal/portals/kwallet.portal
 %{_mandir}/man1/kwallet-query.1*
+%{_datadir}/knotifications6/ksecretd.notifyrc
 
 %files -n %{devname}
 %{_includedir}/KF6/KWallet

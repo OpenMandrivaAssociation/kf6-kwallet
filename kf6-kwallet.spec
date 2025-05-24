@@ -47,6 +47,7 @@ BuildRequires: pkgconfig(libgcrypt)
 BuildRequires: cmake(Gpgmepp)
 # Just to make sure the plasma5 version isn't pulled in
 BuildRequires: plasma6-xdg-desktop-portal-kde
+BuildRequires: pkgconfig(libsecret-1)
 Requires: %{libname} = %{EVRD}
 
 %description

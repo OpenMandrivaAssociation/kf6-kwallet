@@ -6,7 +6,7 @@
 #define git 20240217
 
 Name: kf6-kwallet
-Version: 6.14.1
+Version: 6.15.0
 Release: %{?git:0.%{git}.}1
 %if 0%{?git:1}
 Source0: https://invent.kde.org/frameworks/kwallet/-/archive/master/kwallet-master.tar.bz2#/kwallet-%{git}.tar.bz2
@@ -104,7 +104,6 @@ Safe desktop-wide storage for passwords
 %files -n %{devname}
 %{_includedir}/KF6/KWallet
 %{_libdir}/cmake/KF6Wallet
-%{_qtdir}/doc/KF6Wallet.*
 
 %files -n %{libname}
 %{_libdir}/libKF6Wallet.so*

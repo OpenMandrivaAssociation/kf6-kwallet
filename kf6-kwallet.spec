@@ -6,7 +6,7 @@
 #define git 20240217
 
 Name: kf6-kwallet
-Version: 6.28.0
+Version: 6.29.0
 Release: %{?git:0.%{git}.}1
 %if 0%{?git:1}
 Source0: https://invent.kde.org/frameworks/kwallet/-/archive/master/kwallet-master.tar.bz2#/kwallet-%{git}.tar.bz2
@@ -49,6 +49,8 @@ BuildRequires: cmake(Gpgmepp)
 BuildRequires: plasma6-xdg-desktop-portal-kde
 BuildRequires: pkgconfig(libsecret-1)
 Requires: %{libname} = %{EVRD}
+BuildSystem:	cmake
+BuildOption:	-DBUILD_QCH:BOOL=ON
 
 %description
 Safe desktop-wide storage for passwords
@@ -71,22 +73,6 @@ Development files (Headers etc.) for %{name}.
 
 Safe desktop-wide storage for passwords
 
-%prep
-%autosetup -p1 -n kwallet-%{?git:master}%{!?git:%{version}}
-%cmake \
-	-DBUILD_QCH:BOOL=ON \
-	-DBUILD_WITH_QT6:BOOL=ON \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja_build -C build
-
-%install
-%ninja_install -C build
-
-%find_lang %{name} --all-name --with-qt --with-html
-
 %files -f %{name}.lang
 %{_datadir}/qlogging-categories6/kwallet.*
 %{_bindir}/ksecretd
@@ -97,6 +83,7 @@ Safe desktop-wide storage for passwords
 %{_datadir}/dbus-1/services/org.kde.kwalletd6.service
 %{_datadir}/dbus-1/services/org.kde.kwalletd5.service
 %{_datadir}/dbus-1/services/org.kde.secretservicecompat.service
+%{_datadir}/config.kcfg/kwalletsettings.kcfg
 %{_datadir}/xdg-desktop-portal/portals/kwallet.portal
 %{_datadir}/dbus-1/services/org.freedesktop.impl.portal.desktop.kwallet.service
 %{_mandir}/man1/kwallet-query.1*
